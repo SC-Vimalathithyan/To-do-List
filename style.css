@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+}
+.todoapp {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.todotitle {
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  color: #002765;
+  margin-bottom: 20px;
+}
+
+.todoapp img {
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  margin: 0 10px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #edeef0;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  border-radius: 30px;
+}
+.row input {
+  outline: none;
+  border: none;
+  background: transparent;
+  flex: 1;
+  padding: 10px;
+}
+
+.row button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.addtask {
+  padding: 0 30px;
+}
+
+.addtask ul li {
+  list-style: none;
+  font-size: 22px;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+.addtask ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  top: 12px;
+  left: 8px;
+  border-radius: 50%;
+  background-image: url("images/unchecked.png");
+  background-position: center;
+  background-size: cover;
+}
+.addtask ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url("images/checked.png");
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  text-align: center;
+  line-height: 40px;
+}
+ul li span:hover {
+  background: #edeef0;
+  border-radius: 50%;
+}
